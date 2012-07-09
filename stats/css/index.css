@@ -1,0 +1,18 @@
+@import url('bootstrap.css');
+@import url('bootstrap-responsive.css');
+
+.header {
+  background-color: yellow;
+}
+
+.center {
+  background-color: grey;
+}
+
+.side {
+  background-color: ping;
+}
+
+.content {
+  background-color: lightgreen;
+}

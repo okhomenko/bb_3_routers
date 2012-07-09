@@ -1,0 +1,13 @@
+<ifModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Exclude real dirs
+  RewriteRule ^(app|libs|stats)\/ - [L]
+  
+  # Redirect all on index.html
+  RewriteCond %{REQUEST_FILENAME} -s [OR]
+  RewriteCond %{REQUEST_FILENAME} -l [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^.*$ - [NC,L]
+  RewriteRule ^.*$ index.html [NC,L]
+</ifModule>
